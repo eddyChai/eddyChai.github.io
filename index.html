@@ -15,7 +15,7 @@
     <h1>To-Do List</h1>
     <section class="todo-wrapper">
       <form @keydown.enter.prevent="">
-        <input type="text" class="input-todo" v-bind:class="{ active: new_todo }" placeholder="Do the laundry like you said you would" v-model="new_todo" v-on:keyup.enter="addItem">
+        <input type="text" class="input-todo" v-bind:class="{ active: new_todo }" placeholder="Walk the dog" v-model="new_todo" v-on:keyup.enter="addItem">
         <div class="btn btn-add" v-bind:class="{ active: new_todo }"  @click="addItem">+</div>
       </form>
 

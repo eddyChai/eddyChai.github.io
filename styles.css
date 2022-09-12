@@ -6,8 +6,7 @@ body{
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
   color: #444;
-  background-color: #fefefe;
-  background-image: linear-gradient(#fc6c48 0%, #ef5081 100%);
+  background-color: #b2c6c6;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 20px;
@@ -29,8 +28,6 @@ h1{
   border: 1px solid #eee;
   border-radius: 4px;
   padding: 40px 20px;
-  -webkit-box-shadow: 0 0 15px 0 rgba(0,0,0,0.05);
-  box-shadow: 0 0 15px 0 rgba(0,0,0,0.05);
   background-color: #f4f7fc;
   overflow: hidden;
   position: relative;
@@ -118,18 +115,8 @@ input::placeholder{
 }
 
 .btn-add.active{
-  background: #6664ff;
-  border-color: #6664ff;
+  background: #5fb860;
   pointer-events: visible;
-}
-
-.btn-add.active:hover{
-  background: #4442f6;
-  border-color: #4442f6;
-}
-
-.btn-add:active{
-  transform: scale(0.95);
 }
 
 .control-buttons{
@@ -175,10 +162,10 @@ ul.todo-list li{
   margin: 10px 0;
   background: #e0e8f5;
   border-radius: 3px;
-  padding-left: 38px; /* custom checkbox width + 16 */
+  padding-left: 38px;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-right: 49px; /* delete button + 5 */
+  padding-right: 49px;
   overflow: hidden;
 }
 
@@ -202,16 +189,15 @@ ul.todo-list li .delete{
   cursor: pointer;
   opacity: 0;
   width: 0;
-  background-color: #f56468;
-  color: #fff;
-  transition: all ease-in 0.25s;
+  background-color: #f89295;
+  transition: all ease-in 0.20s;
 }
 
 ul.todo-list li .delete:after{
   position: absolute;
   content: '';
-  width: 16px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
   top: 50%;
   left: 50%;
   background-image: url(images/bin.png);
