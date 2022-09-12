@@ -11,7 +11,7 @@
 
 <body>
   <div id="app">
-    <h1>Daily To-Do list manager</h1>
+    <h1>To-Do List</h1>
     <section class="todo-wrapper">
       <form @keydown.enter.prevent="">
         <input type="text" class="input-todo" v-bind:class="{ active: new_todo }" placeholder="Do the laundry like you said you would" v-model="new_todo" v-on:keyup.enter="addItem">
@@ -19,7 +19,7 @@
       </form>
 
       <div v-if="pending.length > 0">
-        <p class="status busy">You have {{ pending.length }} pending item<span v-if="pending.length>1">s</span></p>
+        <p class="status busy">You have {{ pending.length }} pending item(s)<span v-if="pending.length>1">s</span></p>
         <transition-group name="todo-item" tag="ul" class="todo-list">
           <li v-for="(item, index) in pending" v-bind:key="item.title">
             <input class="todo-checkbox" v-bind:id="'item_' + item.id" v-model="item.done" type="checkbox">
@@ -31,7 +31,7 @@
       </div>
 
       <transition name="slide-fade">
-        <p class="status free" v-if="!pending.length" >You got nothing...</p>
+        <p class="status free" v-if="!pending.length" >You've got nothing...</p>
       </transition>
 
       <div v-if="completed.length > 0 && showComplete">
